@@ -20,6 +20,7 @@
   --light-card: hsl(227, 47%, 96%);
   --light-text1: hsl(228, 12%, 44%);
   --light-text2: hsl(230, 17%, 14%);
+  --card-hover: hsl(228, 25%, 27%);
 }
 
 :root {
@@ -60,6 +61,11 @@ h1 {
   h1 {
     font-size: 1.75rem;
   }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 a,
@@ -200,6 +206,11 @@ a:active {
   border-radius: 0.3125rem;
   position: relative;
   overflow: hidden;
+  transition: background 150ms ease-in-out;
+}
+.card:hover {
+  background-color: var(--card-hover);
+  cursor: pointer;
 }
 .card--facebook {
   border-top: 0.3125rem solid var(--facebook);
@@ -222,6 +233,9 @@ a:active {
 }
 .card--youtube {
   border-top: 0.3125rem solid var(--youTube);
+}
+.card__subtitle {
+  font-size: 0.875rem;
 }
 .card__platform {
   display: flex;
@@ -251,6 +265,9 @@ a:active {
 .card__count--big {
   font-size: 3.5rem;
 }
+.card__count--small {
+  font-size: 2rem;
+}
 .card__label {
   color: var(--dark-text1);
   font-size: 0.75rem;
@@ -273,4 +290,23 @@ a:active {
 }
 .card__change img {
   margin-right: 0.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-items: start;
+  gap: 1.4375rem;
+}
+.card-grid .card__count {
+  margin-bottom: 0;
+}
+.card-grid .card__change,
+.card-grid .card__count {
+  align-self: end;
+}
+.card-grid img,
+.card-grid .card__change {
+  justify-self: end;
 }/*# sourceMappingURL=main.css.map */
