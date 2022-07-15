@@ -18,11 +18,23 @@
   --light-bg: hsl(0, 0%, 100%);
   --light-top-bg--pattern: hsl(225, 100%, 98%);
   --light-card: hsl(227, 47%, 96%);
-  --light-text1: hsl(228, 12%, 44%);
+  --light-text1: hsl(230, 12%, 44%);
   --light-text2: hsl(230, 17%, 14%);
   --card-hover: hsl(228, 25%, 27%);
+  --background: var(--light-bg);
+  --text-color: var(--light-text2);
+  --text2-color: var(--light-text1);
+  --card-bg: var(--light-card);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background:var(--dark-bg);
+    --text-color:var(--dark-text2);
+    --text2-color: var(--dark-text1);
+    --card-bg: var(--dark-card);
+  }
+}
 :root {
   --font-inter: "Inter", sans-serif;
 }
@@ -40,10 +52,19 @@
   padding: 0;
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-inter);
-  background: var(--dark-bg);
-  color: var(--dark-text2);
+  background: var(--background);
+  color: var(--text-color);
 }
 
 h1,
@@ -107,7 +128,7 @@ a:active {
 .header__subtitle {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--dark-text1);
+  color: var(--text2-color);
 }
 .header__toggle {
   margin-left: auto;
@@ -115,39 +136,26 @@ a:active {
 
 .toggle {
   border: none;
-  display: grid;
-  grid-template-columns: 1fr 3.75rem 1fr;
-  grid-template-rows: repeat(2, 1fr);
   gap: 0.3rem 0.5rem;
   margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 3rem;
 }
 .toggle label {
   font-size: 0.875rem;
-  align-self: start;
-  justify-self: center;
 }
 .toggle label[for=dark] {
-  grid-column: 1/2;
-  justify-self: end;
-}
-.toggle label[for=system] {
-  grid-column: 1/4;
-  grid-row: 2/3;
-  justify-self: center;
-}
-.toggle label[for=light] {
-  grid-column: 3/4;
+  line-height: 1.5rem;
+  margin-right: 0.875rem;
 }
 .toggle__wrapper {
   height: 1.5rem;
   position: relative;
-  grid-column: 2/3;
-  grid-row: 1/2;
 }
 .toggle input[type=radio] {
   opacity: 0;
   margin: 0 -2px 0 -2px;
-  width: 1rem;
+  width: 1.3125rem;
   height: 1.5rem;
   cursor: pointer;
 }
