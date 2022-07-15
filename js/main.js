@@ -20,6 +20,12 @@ const setColorMode = () => {
   }
 };
 
+const isModeLight = () => {
+    if(window.matchMedia('(prefer-color-scheme: light)').matches) {
+        light.click();
+    }
+}
+
 for (let i = 0; i < radioBtns.length; i++) {
   radioBtns[i].addEventListener("click", (e) => {
     if (dark.checked) {
@@ -33,3 +39,4 @@ for (let i = 0; i < radioBtns.length; i++) {
 }
 
 setColorMode();
+isModeLight();
