@@ -48,6 +48,7 @@
     --text2-color: var(--light-text1);
     --card-bg: var(--light-card);
     --card-hover: var(--light-card-hover);
+    --card-top-bg-pattern: var(--light-top-bg--pattern);
 }
 
 
@@ -59,5 +60,6 @@
         --text2-color: var(--dark-text1);
         --card-bg: var(--dark-card);
         --card-hover: var(--dark-card-hover);
+        --card-top-bg-pattern: var(--light-top-bg--pattern);
     }
 }
