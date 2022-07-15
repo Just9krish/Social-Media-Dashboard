@@ -14,7 +14,7 @@ const setColorMode = () => {
   if (localStorage.getItem("colormode") == "dark") {
     setDarkMode();
     dark.click()
-  } else {
+  } else if (localStorage.getItem("colormode") == "light") {
     setLightMode();
     light.click();
   }
