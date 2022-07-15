@@ -207,7 +207,7 @@ a:active {
 }
 
 .card {
-  background-color: var(--dark-card);
+  background-color: var(--card-bg);
   color: var(--dark-text1);
   text-align: center;
   padding: 1.5625rem;
