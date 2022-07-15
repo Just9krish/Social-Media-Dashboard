@@ -37,7 +37,7 @@
     --text2-color: var(--dark-text1);
     --card-bg: var(--dark-card);
     --card-hover: var(--dark-card-hover);
-    --card-top-bg-pattern: var(--light-top-bg--pattern);
+    --card-top-bg-pattern: var(--dark-top-bg--pattern);
   }
 }
 :root {
@@ -282,7 +282,7 @@ a:active {
   font-size: 2rem;
 }
 .card__label {
-  color: var(--dark-text1);
+  color: var(--text2-color);
   font-size: 0.75rem;
   font-weight: 400;
   text-transform: uppercase;
