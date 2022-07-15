@@ -10,6 +10,7 @@
   --toggle-dark-bg-start: hsl(210, 78%, 56%);
   --toggle-dark-bg-end: hsl(146, 68%, 55%);
   --toggle-light: hsl(230, 19%, 60%);
+  --toggle-light-bg: hsl(230, 22%, 74%);
   --dark-bg: hsl(230, 17%, 14%);
   --dark-top-bg-pattern: hsl(232, 19%, 15%);
   --dark-card: hsl(228, 28%, 20%);
@@ -29,6 +30,7 @@
   --card-hover: var(--light-card-hover);
   --card-top-bg-pattern: var(--light-top-bg--pattern);
   --toggle: var(--toggle-light);
+  --toggle-bg: var(--toggle-light-bg) ;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +42,7 @@
     --card-hover: var(--dark-card-hover);
     --card-top-bg-pattern: var(--dark-top-bg--pattern);
     --toggle: var(--light-bg);
+    --toggle-bg: linear-gradient(225deg, var(--toggle-dark-bg-end) 0%, var(--toggle-dark-bg-start) 98.02%);
   }
 }
 :root {
@@ -151,6 +154,7 @@ a:active {
 .toggle label {
   font-size: 0.875rem;
   color: var(--toggle);
+  font-weight: 700;
 }
 .toggle label[for=dark] {
   line-height: 1.5rem;
@@ -174,7 +178,7 @@ a:active {
   top: 0;
   width: 100%;
   border-radius: 0.75rem;
-  background: linear-gradient(225deg, var(--toggle-bg-end) 0%, var(--toggle-bg-start) 98.02%);
+  background: var(--toggle-bg);
   pointer-events: none;
 }
 .toggle__switcher {

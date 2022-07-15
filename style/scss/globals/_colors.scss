@@ -20,6 +20,7 @@
 
     // #### Light Theme
     --toggle-light: hsl(230, 19%, 60%);
+    --toggle-light-bg: hsl(230, 22%, 74%);
     // ### Neutral
 
     // #### Dark Theme
@@ -50,6 +51,7 @@
     --card-hover: var(--light-card-hover);
     --card-top-bg-pattern: var(--light-top-bg--pattern);
     --toggle: var(--toggle-light);
+    --toggle-bg: var(--toggle-light-bg)
 }
 
 
@@ -63,5 +65,6 @@
         --card-hover: var(--dark-card-hover);
         --card-top-bg-pattern: var(--dark-top-bg--pattern);
         --toggle: var(--light-bg);
+        --toggle-bg: linear-gradient(225deg, var(--toggle-dark-bg-end) 0%, var(--toggle-dark-bg-start) 98.02%);
     }
 }
