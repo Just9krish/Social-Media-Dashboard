@@ -11,9 +11,9 @@
         font-size: rem(14);
         color: var(--toggle);
         font-weight: 700;
-        
+
         &[for="dark"] {
-        line-height: rem(24);
+            line-height: rem(24);
             margin-right: rem(14);
         }
     }
