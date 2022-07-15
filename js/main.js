@@ -20,10 +20,20 @@ const setColorMode = () => {
   }
 };
 
-const isModeLight = () => {
+const checkMode = () => {
     if(window.matchMedia('(prefer-color-scheme: light)').matches) {
         light.click();
+    } else if (window.matchMedia('(prefer-color-scheme: light)').matches) {
+        dark.click();
     }
+}
+
+const checkModeChange = () => {
+    window.matchMedia('(prefer-color-scheme: dark)').addEventListener('change', e => {
+        if(e.matches) {
+        checkMode();
+        }
+    })
 }
 
 for (let i = 0; i < radioBtns.length; i++) {
@@ -39,4 +49,5 @@ for (let i = 0; i < radioBtns.length; i++) {
 }
 
 setColorMode();
-isModeLight();
+checkMode();
+checkModeChange();
